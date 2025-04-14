@@ -48,7 +48,7 @@ const textSignOca = {
                         i.tabindex > item.tabindex && i.role_id === parent.info.role_id
                 )
                 .sort((a, b) => a.tabindex - b.tabindex);
-            if (next_items.length > 0) {
+            if (next_items.length > 0 && parent.items[next_items[0].id]) {
                 ev.currentTarget.blur();
                 parent.items[next_items[0].id].dispatchEvent(
                     new Event("focus_signature")
