@@ -33,6 +33,7 @@ const textSignOca = {
                 ev.target.value = parent.info.partner[item.default_value];
             }
         });
+        input.value = item.value;
         input.addEventListener("change", (ev) => {
             this.change(ev.srcElement.value, parent, item, signatureItem);
         });
